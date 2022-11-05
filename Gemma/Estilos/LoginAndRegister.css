@@ -1,4 +1,41 @@
-﻿.tituloRegistro{
+﻿
+.tituloRegistro{
     margin: 0 auto;
     text-align:center;
+}
+.cuerpo {
+    background-color: white;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #6ce486;
+    margin-left: 3rem;
+    border: 2px solid white;
+}
+
+.row {
+    display:flex;   
+    width:100%;
+    gap: 20px;
+    margin-top:5rem;
+}
+
+.carousel {
+    margin-left: 3rem;
+    border: 2px solid white;
+}
+
+.formRegistro {
+    width: 30%;
+    margin: 0 auto;
+    border-radius: 10px;
+    border: 1.5px solid black;
+    padding: 20px;
+    background-color: #de9d27;
+    border: 2px solid white;
 }

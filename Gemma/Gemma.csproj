@@ -96,6 +96,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cadenas\CdRegistro.cs" />
     <Compile Include="MpLoginAndRegister.Master.cs">
       <DependentUpon>MpLoginAndRegister.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -147,6 +148,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Images\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

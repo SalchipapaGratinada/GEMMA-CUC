@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Data;
+using Gemma.Cadenas;
 
 namespace Gemma.Pages
 {
@@ -37,20 +38,68 @@ namespace Gemma.Pages
                 if (boo.Equals("1"))
                 {
                     conexion.Close();
-                    Response.Redirect("Login.aspx");
+                    traerPerfil();
                 }
                 else
                 {
                     conexion.Close();
-                    Response.Redirect("Register.aspx");
+                    msjUsuarioOPassIncorrecta();
                 }
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
 
-                throw;
+                throw ex;
             }
         }
+        
+
+        public void traerPerfil()
+        {
+            string usu = tbusuario.Text;
+            string pass = tbpassword.Text;
+            try
+            {
+                conexion.Open();
+                string cadena = CdRegistro.traerPerfil(usu, pass);
+                MySqlDataAdapter da = new MySqlDataAdapter(cadena, conexion);
+                DataSet ds = new DataSet();
+                ds.Clear();
+                da.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                DataRow row = dt.Rows[0];
+                string perfil = row[0].ToString();
+                if (perfil.Equals("4"))
+                {
+                    conexion.Close();
+                    msjPerfilEstudiante();
+                }
+                else if(perfil.Equals("3"))
+                {
+                    conexion.Close();
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public void msjPerfilEstudiante()
+        {
+            string javaScript = string.Format("perfilEstudiante();");
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "perfilEstudiante", javaScript, true);
+        }
+
+        public void msjUsuarioOPassIncorrecta()
+        {
+            string javaScript = string.Format("UsuarioOPassInccorrecta();");
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "UsuarioOPassInccorrecta", javaScript, true);
+        }
+
+
+
     }
 }

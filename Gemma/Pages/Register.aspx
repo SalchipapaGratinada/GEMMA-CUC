@@ -9,12 +9,12 @@
     <link href="../content/toastr.css" rel="stylesheet" />
     <script src="../Scripts/toastr.js"></script>
 </asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+<asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
-   <div class="tituloRegistro">
-       <h2>UNETE A GEMMA!! - TE DAREMOS 200 SETCOINS!</h2>
-   </div>
-    <form runat="server" class="h-100 d-flex align-items-center justify-content-center">
+    <div class="tituloRegistro">
+        <h2>UNETE A GEMMA!! - TE DAREMOS 200 SETCOINS!</h2>
+    </div>
+    <form runat="server" class="formRegistro">
         <div>
             <div class="mb-3">
                 <label class="form-label">Nombre</label>
@@ -38,10 +38,10 @@
             </div>
             <div class="mb-3">
                 <label class="form-label">Correo Electronico</label>
-                <asp:TextBox runat="server"  CssClass="form-control" ID="tbEmail"></asp:TextBox>
+                <asp:TextBox runat="server" CssClass="form-control" ID="tbEmail"></asp:TextBox>
             </div>
-            <asp:Button runat="server" CssClass="btn btn-primary" ID="btnRegistrar" Text="Registrar" OnClick="btnRegistrar_Click"/>
-            <asp:Button runat="server" CssClass="btn btn-secondary" ID="btnClear" Text="Clear" OnClick="btnClear_Click"/>
+            <asp:Button runat="server" CssClass="btn btn-primary" ID="btnRegistrar" Text="Registrar" OnClick="btnRegistrar_Click" />
+            <asp:Button runat="server" CssClass="btn btn-secondary" ID="btnClear" Text="Clear" OnClick="btnClear_Click" />
         </div>
     </form>
 
