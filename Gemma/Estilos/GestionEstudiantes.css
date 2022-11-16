@@ -1,0 +1,18 @@
+﻿
+
+.dropsClasesgrupos{
+    width: 20%;
+    height:80px;
+}
+.dropClases {
+    width: 50px;
+    height: 80px;
+    margin-top: 3px;
+}
+
+.dropGrupos {
+    width: 50px;
+    height: 80px;
+    margin-top: 3px;
+}
+/*col align-self-end*/

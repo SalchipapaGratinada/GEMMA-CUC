@@ -12,33 +12,37 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder1" runat="server" >
 
     <div class="tituloRegistro">
-        <h2>UNETE A GEMMA!! - TE DAREMOS 200 SETCOINS!</h2>
+        <h2>UNETE A GEMMA!! - TE DAREMOS 200 C COINS!</h2>
     </div>
     <form runat="server" class="formRegistro">
         <div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label class="form-label">Nombre</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbnombre"></asp:TextBox>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label class="form-label">Apellido</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbApellido"></asp:TextBox>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label class="form-label">NickName</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="tbNickName"></asp:TextBox>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
+                <label class="form-label">Carrera</label>
+                <asp:DropDownList runat="server" ID="dropCarreras" CssClass="form-control dropClases" ></asp:DropDownList>
+            </div>
+            <div class="mb-2">
                 <label class="form-label">PassWord</label>
                 <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="tbPassword"></asp:TextBox>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label class="form-label">Repita PassWord</label>
                 <asp:TextBox runat="server" TextMode="Password" CssClass="form-control" ID="tbConfirmacionPassword"></asp:TextBox>
             </div>
-            <div class="mb-3">
+            <div class="mb-2">
                 <label class="form-label">Correo Electronico</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="tbEmail"></asp:TextBox>
+                <asp:TextBox runat="server" TextMode="Email" CssClass="form-control" ID="tbEmail"></asp:TextBox>
             </div>
             <asp:Button runat="server" CssClass="btn btn-primary" ID="btnRegistrar" Text="Registrar" OnClick="btnRegistrar_Click" />
             <asp:Button runat="server" CssClass="btn btn-secondary" ID="btnClear" Text="Clear" OnClick="btnClear_Click" />

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Linq;
+using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -18,7 +19,11 @@ namespace Gemma.Pages
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                cargarDropCarreras();
+            }
+            
         }
 
         protected void btnClear_Click(object sender, EventArgs e)
@@ -45,20 +50,29 @@ namespace Gemma.Pages
                 {
                     if (!validarNick() && !validarCorreo())
                     {
-                        try
+                        int idCarrera = Int32.Parse(dropCarreras.SelectedValue.ToString());
+                        if (idCarrera != 0 )
                         {
-                            conexion.Open();
-                            string cadena = CdRegistro.registrarUsuario(nombre, apellido, nikcName, pass, email);
-                            MySqlCommand cmd = new MySqlCommand(cadena, conexion);
-                            cmd.ExecuteNonQuery();
-                            conexion.Close();
-                            msjUsuarioAgregado();
-                            bloquearCampos();
+                            try
+                            {
+                                conexion.Open();
+                                string cadena = CdRegistro.registrarUsuario(nombre, apellido, nikcName, pass, email, idCarrera);
+                                MySqlCommand cmd = new MySqlCommand(cadena, conexion);
+                                cmd.ExecuteNonQuery();
+                                conexion.Close();
+                                msjUsuarioAgregado();
+                                bloquearCampos();
+                            }
+                            catch (Exception ex)
+                            {
+                                throw ex;
+                            }
                         }
-                        catch (Exception ex)
+                        else
                         {
-                            throw ex;
+                            msjSeleccioneCarrera();
                         }
+                        
                     }                                           
                 }
                 else
@@ -69,6 +83,29 @@ namespace Gemma.Pages
             else
             {
                 msjCamposVacios();
+            }
+        }
+
+        public void cargarDropCarreras()
+        {
+            try
+            {
+                string cadena = CdRegistro.cargarDropCarreras();
+                MySqlCommand cmd = new MySqlCommand(cadena, conexion);
+                conexion.Open();
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                dropCarreras.DataSource = ds;
+                dropCarreras.DataTextField = "name";
+                dropCarreras.DataValueField = "id";
+                dropCarreras.DataBind();
+                dropCarreras.Items.Insert(0, new ListItem("Seleccione Su Carrera", "0"));
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
             }
         }
 
@@ -125,31 +162,45 @@ namespace Gemma.Pages
             }
         }
 
+        public Boolean validarFormatoCorreo(string correo)
+        {
+            string validador = "^[_A-Za-z0-9-\\+]+(\\.[_A-Za-z0-9-]+)*@[A-Za-z0-9-]+(\\.[A-Za-z0-9]+)*(\\.[A-Za-z]{2,})$";
+            Boolean salida = Regex.IsMatch(correo,validador);
+            return salida;
+        }
         public Boolean validarCorreo()
         {
             string email = tbEmail.Text;
             string cd = "SELECT EXISTS (SELECT * FROM users WHERE user_email = '" + email + "');";
             try
             {
-                conexion.Open();
-                MySqlDataAdapter da = new MySqlDataAdapter(cd, conexion);
-                DataSet ds = new DataSet();
-                ds.Clear();
-                da.Fill(ds);
-                DataTable dt = ds.Tables[0];
-                DataRow row = dt.Rows[0];
-                string boo = row[0].ToString();
-                if (boo.Equals("1"))
+                if (validarFormatoCorreo(email))
                 {
-                    msjCorreo();
-                    conexion.Close();
-                    return true;
+                    conexion.Open();
+                    MySqlDataAdapter da = new MySqlDataAdapter(cd, conexion);
+                    DataSet ds = new DataSet();
+                    ds.Clear();
+                    da.Fill(ds);
+                    DataTable dt = ds.Tables[0];
+                    DataRow row = dt.Rows[0];
+                    string boo = row[0].ToString();
+                    if (boo.Equals("1"))
+                    {
+                        msjCorreo();
+                        conexion.Close();
+                        return true;
+                    }
+                    else
+                    {
+                        conexion.Close();
+                        return false;
+                    }
                 }
                 else
                 {
-                    conexion.Close();
                     return false;
                 }
+                
 
             }
             catch (Exception)
@@ -183,6 +234,11 @@ namespace Gemma.Pages
             ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "nickYaExiste", javaScript, true);
         }
 
+        public void msjSeleccioneCarrera()
+        {
+            string javaScript = string.Format("seleccioneCarrera();");
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "seleccioneCarrera", javaScript, true);
+        }
         public void msjCorreo()
         {
             string javaScript = string.Format("correoExiste();");
@@ -203,6 +259,7 @@ namespace Gemma.Pages
             tbConfirmacionPassword.Enabled = false;
             tbPassword.Enabled = false;
             tbEmail.Enabled = false;
+            dropCarreras.Enabled = false;
         }
 
     }

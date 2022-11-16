@@ -1,0 +1,212 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MpEstudiante.master.cs" Inherits="Gemma.MpEstudiante" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Gemma CUC</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no " />
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- Ionicons -->
+    <link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+    <link href="jAlert/jquery.alerts.css" rel="stylesheet" type="text/css" />
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css" integrity="sha512-NtU/Act0MEcVPyqC153eyoq9L+UHkd0s22FjIaKByyA6KtZPrkm/O5c5xzaia4pyCfReCS634HyQ7tJwKNxC/g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha512-77kidyGDJGWWmJ0MVO0CRp+6nRgZRK67frUVBRvnL1zCcmcw9FkCQxpDHq52SebW+KWTAnnuX0Qk2/MQWogWoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css" integrity="sha512-kvhPVu71bHOjcoXXZ9kBVYYT6u8JCkWFAgsV3DWWLuv26ZiSHqdDLPuAm8FQ6gNAzY32fkZGXI/bAOHihCK/Fg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html, body {
+            min-height: 100%;
+            padding: 0;
+            margin: 0;
+            font-family: 'Source Sans Pro', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        }
+
+        iframe {
+            display: block;
+            overflow: auto;
+            border: 0;
+            margin: 0;
+            padding: 0;
+            margin: 0 auto;
+        }
+
+        .frame {
+            height: 49px;
+            margin: 0;
+            padding: 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+            .frame a {
+                color: #666;
+            }
+
+                .frame a:hover {
+                    color: #222;
+                }
+
+            .frame .buttons a {
+                height: 49px;
+                line-height: 49px;
+                display: inline-block;
+                text-align: center;
+                width: 50px;
+                border-left: 1px solid #ddd;
+            }
+
+            .frame .brand {
+                color: #444;
+                font-size: 20px;
+                line-height: 49px;
+                display: inline-block;
+                padding-left: 10px;
+            }
+
+                .frame .brand small {
+                    font-size: 14px;
+                }
+
+        a, a:hover {
+            text-decoration: none;
+        }
+
+        .container-fluid {
+            padding: 0;
+            margin: 0;
+        }
+
+        .text-muted {
+            color: #999;
+        }
+
+        .ad {
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            background: #222;
+            background: rgba(0,0,0,0.8);
+            width: 100%;
+            color: #fff;
+            display: none;
+        }
+
+        #close-ad {
+            float: left;
+            margin-left: 10px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        #close {
+            cursor: pointer;
+        }
+
+        #no-cursor {
+            cursor: none;
+        }
+
+        .cerrarSession {
+            margin-right:-55rem;
+        }
+    </style>
+</head>
+<body class="skin-blue">
+    <header class="header">
+        <a href="#" class="logo">Gemma-CUC-2022</a>
+        <nav class="navbar navbar-static-top" role="navigation">
+            <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <div class="cerrarSession">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown user user-menu  no-cursor">
+                        <a href="Index.aspx">
+                            <%--<i class="glyphicon glyphicon-user"></i>--%>
+                            <span id="close">Cerrar Sesión</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="wrapper row-offcanvas row-oofcanvas-left">
+        <aside class="left-side sidebar-offcanvas">
+            <section class="sidebar">
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="/Images/avatar9.jpg" class="img-circle" alt="User Image"/>
+                    </div>
+                    <div class="pull-left info">
+                        <asp:Label runat="server" ID="lblbienvenida"></asp:Label>
+                    </div>
+                </div>
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <a href="#">
+                            <i class="fa fa-dashboard"></i>
+                            <span>Panel General</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span>Gestionar Profesores</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span>Gestionar Estudiantes</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </aside>
+    </div>
+    <aside class="right-side">
+        <section class="content-header">
+            <h1>
+                <asp:Label runat="server" ID="lblOpcionMenu" Text="Panel General"></asp:Label>
+            </h1>
+        </section>
+        <section class="content">
+            <form id="form1" runat="server">
+                <div>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </section>
+    </aside>
+</body>
+
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <script src="js/AdminLTE/app.js" type="text/javascript"></script>
+    <script src="jAlert/jquery.alerts.js" type="text/javascript"></script>
+    <script src="js/jquery.ui.draggable.js" type="text/javascript"></script>
+
+    <script src="js/plugins/datatables/jquery.dataTables.js"></script>
+    <script src="js/plugins/datatables/dataTables.bootstrap.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.11.3/jquery-ui.min.js" integrity="sha256-xI/qyl9vpwWFOXz7+x/9WkG5j/SVnSw21viy8fWwbeE=" crossorigin="anonymous"></script>
+
+
+</html>

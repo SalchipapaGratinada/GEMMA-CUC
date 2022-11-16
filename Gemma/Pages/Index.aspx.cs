@@ -38,7 +38,21 @@ namespace Gemma.Pages
                 if (boo.Equals("1"))
                 {
                     conexion.Close();
-                    traerPerfil();
+                    if (traerPerfil() == 4)
+                    {
+                        traerNombreAndId();
+                        Response.Redirect("Estudiante.aspx");
+                    }
+                    else if(traerPerfil() == 3)
+                    {
+                        traerNombreAndId();
+                        Response.Redirect("Profesor.aspx");
+                    }
+                    else
+                    {
+                        msjUsuarioOPassIncorrecta();
+                    }
+
                 }
                 else
                 {
@@ -55,7 +69,7 @@ namespace Gemma.Pages
         }
         
 
-        public void traerPerfil()
+        public int traerPerfil()
         {
             string usu = tbusuario.Text;
             string pass = tbpassword.Text;
@@ -73,20 +87,49 @@ namespace Gemma.Pages
                 if (perfil.Equals("4"))
                 {
                     conexion.Close();
-                    msjPerfilEstudiante();
+                    return 4;
                 }
                 else if(perfil.Equals("3"))
                 {
                     conexion.Close();
+                    return 3;
                 }
-
+                else
+                {
+                    return 0;
+                }
             }
             catch (Exception ex)
             {
                 throw ex;
+                
             }
         }
 
+
+        public void traerNombreAndId()
+        {
+            string usu = tbusuario.Text;
+            string pass = tbpassword.Text;
+            try
+            {
+                conexion.Open();
+                string cadena = CdRegistro.traerNombreAnndId(usu, pass);
+                MySqlDataAdapter da = new MySqlDataAdapter(cadena, conexion);
+                DataSet ds = new DataSet();
+                ds.Clear();
+                da.Fill(ds);
+                DataTable dt = ds.Tables[0];
+                DataRow row = dt.Rows[0];
+                Session["userId"] = Int32.Parse(row[0].ToString());
+                Session["nombre_usuario"] = row[1].ToString();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+        }
         public void msjPerfilEstudiante()
         {
             string javaScript = string.Format("perfilEstudiante();");
