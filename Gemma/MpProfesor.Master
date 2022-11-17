@@ -31,9 +31,6 @@
 
 </head>
 
-
-
-
 <body class="skin-blue">
     <header class="header">
         <a href="#" class="logo">Gemma-CUC-2022</a>
@@ -110,6 +107,13 @@
                             <span class="spanSeciones">C-Coinst</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="Publicaciones.aspx">
+                            <i class="fa fa-th"></i>
+                            <span class="spanSeciones">Publicaciones</span>
+                            
+                        </a>
+                    </li>
                 </ul>
             </section>
         </aside>
@@ -117,7 +121,7 @@
     <aside class="right-side">
         <section class="content-header">
             <h1>
-                <asp:Label runat="server" ID="lblOpcionMenu" Text="Panel General"></asp:Label>
+                <asp:Label runat="server" ID="lblOpcionMenu" Text="GEMMA-CUC" ></asp:Label>
             </h1>
         </section>
         <section class="content">

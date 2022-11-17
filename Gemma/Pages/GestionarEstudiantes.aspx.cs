@@ -194,6 +194,24 @@ namespace Gemma.Pages
             ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "estudianteYaEnClase", javaScript, true);
         }
 
-
+        protected void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.Open();
+                string cadena = CdGestionEstudiantes.buscar(tbBuscar.Text);
+                MySqlCommand cmd = new MySqlCommand(cadena, conexion);
+                MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+                gvuEstudiantes.DataSource = dt;
+                gvuEstudiantes.DataBind();
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

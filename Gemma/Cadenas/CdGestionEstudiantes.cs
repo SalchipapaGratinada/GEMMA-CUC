@@ -37,5 +37,13 @@ namespace Gemma.Cadenas
             return cd;
         }
 
+        public static string buscar(string cadena)
+        {
+            string cd = "select usu.id AS ID, usu.user_name AS Nombre, usu.user_lastname AS Apellido, carr.name AS Carrera " +
+                "from users AS usu inner join careers AS carr on carr.id = usu.careers_id WHERE usu.profiles_id = 4 " +
+                "and usu.user_name like '%"+cadena+"%'; ";
+            return cd;
+        }
+
     }
 }

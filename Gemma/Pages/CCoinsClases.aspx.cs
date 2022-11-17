@@ -51,30 +51,39 @@ namespace Gemma.Pages
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            double cantidadCCoins = double.Parse(tbCantidadCCoins.Text);
-            int idClase = Int32.Parse(dropClases.SelectedValue.ToString());
-            try
+            string cantidadCCoins = (tbCantidadCCoins.Text);
+            if (cantidadCCoins.Equals(""))
             {
-                if (idClase != 0)
-                {
-                    string cadena = CdCCoins.añadirCCoinsPorClase(idClase, cantidadCCoins);
-                    MySqlCommand cmd = new MySqlCommand(cadena, conexion);
-                    conexion.Open();
-                    cmd.ExecuteNonQuery();
-                    conexion.Close();
-                    msjCCoinsAgregados();
-                    reinicarTodo();
-                }
-                else
-                {
-                    msjDropClasesVacio();
-                }
+                msjCajaCCoinsVacia();
             }
-            catch (Exception ex)
+            else
             {
+                double cantidad = double.Parse(cantidadCCoins);
+                int idClase = Int32.Parse(dropClases.SelectedValue.ToString());
+                try
+                {
+                    if (idClase != 0)
+                    {
+                        string cadena = CdCCoins.añadirCCoinsPorClase(idClase, cantidad);
+                        MySqlCommand cmd = new MySqlCommand(cadena, conexion);
+                        conexion.Open();
+                        cmd.ExecuteNonQuery();
+                        conexion.Close();
+                        msjCCoinsAgregados();
+                        reinicarTodo();
+                    }
+                    else
+                    {
+                        msjDropClasesVacio();
+                    }
+                }
+                catch (Exception ex)
+                {
 
-                throw ex;
+                    throw ex;
+                }
             }
+            
         }
 
 
@@ -113,6 +122,11 @@ namespace Gemma.Pages
         {
             string javaScript = string.Format("dropClasesVacio();");
             ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "dropClasesVacio", javaScript, true);
+        }
+        public void msjCajaCCoinsVacia()
+        {
+            string javaScript = string.Format("agregueCCcoins();");
+            ScriptManager.RegisterClientScriptBlock(this, typeof(Page), "agregueCCcoins", javaScript, true);
         }
         public void msjCCoinsAgregados()
         {

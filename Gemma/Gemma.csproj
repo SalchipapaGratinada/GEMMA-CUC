@@ -390,6 +390,7 @@
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\Login.aspx" />
     <Content Include="Pages\Profesor.aspx" />
+    <Content Include="Pages\Publicaciones.aspx" />
     <Content Include="Pages\Register.aspx" />
     <Content Include="content\toastr.scss" />
     <Content Include="content\toastr.less" />
@@ -560,6 +561,13 @@
     </Compile>
     <Compile Include="Pages\Profesor.aspx.designer.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Publicaciones.aspx.cs">
+      <DependentUpon>Publicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Publicaciones.aspx.designer.cs">
+      <DependentUpon>Publicaciones.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Register.aspx.cs">
       <DependentUpon>Register.aspx</DependentUpon>

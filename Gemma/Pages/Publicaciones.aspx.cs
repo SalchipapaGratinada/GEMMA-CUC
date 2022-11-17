@@ -5,15 +5,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Gemma
+namespace Gemma.Pages
 {
-    public partial class MpProfesor : System.Web.UI.MasterPage
+    public partial class Publicaciones : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblBienvenida.Text = "Bienvenido "+ Session["nombre_usuario"].ToString()+"";
-            
+
         }
     }
 }

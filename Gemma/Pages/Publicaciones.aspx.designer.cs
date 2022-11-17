@@ -11,7 +11,7 @@ namespace Gemma.Pages
 {
 
 
-    public partial class Profesor
+    public partial class Publicaciones
     {
     }
 }

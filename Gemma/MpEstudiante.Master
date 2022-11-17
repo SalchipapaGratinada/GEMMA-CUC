@@ -23,6 +23,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" integrity="sha512-77kidyGDJGWWmJ0MVO0CRp+6nRgZRK67frUVBRvnL1zCcmcw9FkCQxpDHq52SebW+KWTAnnuX0Qk2/MQWogWoQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/1.5.2/css/ionicons.min.css" integrity="sha512-kvhPVu71bHOjcoXXZ9kBVYYT6u8JCkWFAgsV3DWWLuv26ZiSHqdDLPuAm8FQ6gNAzY32fkZGXI/bAOHihCK/Fg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+
+        .spanSeciones{
+            font-size: 2rem;
+        }
+
         html, body {
             min-height: 100%;
             padding: 0;
@@ -155,21 +160,33 @@
                 </div>
                 <ul class="sidebar-menu">
                     <li class="active">
-                        <a href="#">
+                        <a href="Estudiante.aspx">
                             <i class="fa fa-dashboard"></i>
-                            <span>Panel General</span>
+                            <span class="spanSeciones">Panel General</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa fa-th"></i>
-                            <span>Gestionar Profesores</span>
+                            <span class="spanSeciones">Ver Clases</span>
                         </a>
                     </li>
                     <li>
                         <a href="#">
                             <i class="fa fa-th"></i>
-                            <span>Gestionar Estudiantes</span>
+                            <span class="spanSeciones">Ver Grupos</span>
+                        </a>
+                    </li>
+                     <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="spanSeciones">Ver C-Coins</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-th"></i>
+                            <span class="spanSeciones">Canjear C-Coins</span>
                         </a>
                     </li>
                 </ul>
@@ -179,7 +196,7 @@
     <aside class="right-side">
         <section class="content-header">
             <h1>
-                <asp:Label runat="server" ID="lblOpcionMenu" Text="Panel General"></asp:Label>
+                <asp:Label runat="server" ID="lblOpcionMenu" Text="GEMMA-CUC"></asp:Label>
             </h1>
         </section>
         <section class="content">

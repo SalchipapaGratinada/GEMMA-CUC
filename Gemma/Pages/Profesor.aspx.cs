@@ -11,14 +11,13 @@ namespace Gemma.Pages
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void btnprueba_Click(object sender, EventArgs e)
         {
-            lblusuario.Text = Session["nombre_usuario"].ToString();
-            lblid.Text = Session["userId"].ToString();
-
+            //lblusuario.Text = Session["nombre_usuario"].ToString();
+            //lblid.Text = Session["userId"].ToString();
         }
     }
 }
