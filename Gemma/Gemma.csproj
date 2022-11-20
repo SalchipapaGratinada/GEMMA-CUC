@@ -380,6 +380,10 @@
     <Content Include="Pages\CrudClases.aspx" />
     <Content Include="Pages\CrudGesEstudiantes.aspx" />
     <Content Include="Pages\CrudGrupos.aspx" />
+    <Content Include="Pages\CrudPublicaciones.aspx" />
+    <Content Include="Pages\EstCCoins.aspx" />
+    <Content Include="Pages\EstClases.aspx" />
+    <Content Include="Pages\EstGrupos.aspx" />
     <Content Include="Pages\Estudiante.aspx" />
     <Content Include="Pages\GestionarClase.aspx" />
     <Content Include="Pages\GestionarEstudiantes.aspx" />
@@ -425,6 +429,7 @@
     <Compile Include="Cadenas\CdGestionGrupos.cs" />
     <Compile Include="Cadenas\CdGrupoEstudiantes.cs" />
     <Compile Include="Cadenas\CdGrupos.cs" />
+    <Compile Include="Cadenas\CdPublicaciones.cs" />
     <Compile Include="Cadenas\CdRegistro.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -491,6 +496,34 @@
     </Compile>
     <Compile Include="Pages\CrudGrupos.aspx.designer.cs">
       <DependentUpon>CrudGrupos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\CrudPublicaciones.aspx.cs">
+      <DependentUpon>CrudPublicaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CrudPublicaciones.aspx.designer.cs">
+      <DependentUpon>CrudPublicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EstCCoins.aspx.cs">
+      <DependentUpon>EstCCoins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EstCCoins.aspx.designer.cs">
+      <DependentUpon>EstCCoins.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EstClases.aspx.cs">
+      <DependentUpon>EstClases.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EstClases.aspx.designer.cs">
+      <DependentUpon>EstClases.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EstGrupos.aspx.cs">
+      <DependentUpon>EstGrupos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EstGrupos.aspx.designer.cs">
+      <DependentUpon>EstGrupos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\Estudiante.aspx.cs">
       <DependentUpon>Estudiante.aspx</DependentUpon>

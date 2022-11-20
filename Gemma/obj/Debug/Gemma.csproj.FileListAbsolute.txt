@@ -50,6 +50,7 @@ C:\Users\alfre\source\repos\Gemma\Gemma\bin\roslyn\vbc.exe.config
 C:\Users\alfre\source\repos\Gemma\Gemma\bin\roslyn\vbc.rsp
 C:\Users\alfre\source\repos\Gemma\Gemma\bin\roslyn\VBCSCompiler.exe
 C:\Users\alfre\source\repos\Gemma\Gemma\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\alfre\source\repos\Gemma\Gemma\bin\AjaxControlToolkit.dll
 C:\Users\alfre\source\repos\Gemma\Gemma\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\alfre\source\repos\Gemma\Gemma\bin\MySql.Data.dll
 C:\Users\alfre\source\repos\Gemma\Gemma\bin\MySql.Web.dll
@@ -70,5 +71,4 @@ C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.csproj.CoreCompileInputs
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.csproj.CopyComplete
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.dll
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.pdb
-C:\Users\alfre\source\repos\Gemma\Gemma\bin\AjaxControlToolkit.dll
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.csproj.AssemblyReference.cache

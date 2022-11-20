@@ -119,8 +119,9 @@ namespace Gemma.Pages
                 }
                 else
                 {
+                    int idClase = Int32.Parse(dropClases.SelectedValue.ToString());
                     double cantidad = double.Parse(tbCantidad.Text);
-                    string cadena = CdCCoins.añadirCCoinsPorestudiante(idEstudiante, cantidad);
+                    string cadena = CdCCoins.añadirCCoinsPorestudiante(idEstudiante, idClase, cantidad);
                     conexion.Open();
                     MySqlCommand cmd = new MySqlCommand(cadena, conexion);
                     cmd.ExecuteNonQuery();

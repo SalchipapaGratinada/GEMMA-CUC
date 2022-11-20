@@ -22,10 +22,10 @@ namespace Gemma.Cadenas
             return cd;
         }
 
-        public static string añadirCCoinsPorestudiante(int idEstudiante, double cantidad)
+        public static string añadirCCoinsPorestudiante(int idEstudiante, int idClase, double cantidad)
         {
             string cd = "UPDATE `wallets` SET `wallets`.`summary`= `wallets`.`summary` +"+cantidad+" " +
-                "WHERE `wallets`.`users_id`= "+idEstudiante+"; ";
+                "WHERE `wallets`.`users_id`= "+idEstudiante+" AND `wallets`.`classes_id`= "+idClase+"; ";
             return cd;
         }
     }

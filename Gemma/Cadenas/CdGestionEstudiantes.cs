@@ -45,5 +45,13 @@ namespace Gemma.Cadenas
             return cd;
         }
 
+        public static string crearCartera(int idUsuario, int idClase)
+        {
+            string cd = " INSERT INTO `wallets`(`summary`,`users_id`,`classes_id`) VALUES(0, "+idUsuario+", "+idClase+"); ";
+            return cd;
+        }
+
+
+
     }
 }

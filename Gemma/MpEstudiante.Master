@@ -166,19 +166,19 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="EstClases.aspx">
                             <i class="fa fa-th"></i>
                             <span class="spanSeciones">Ver Clases</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="EstGrupos.aspx">
                             <i class="fa fa-th"></i>
                             <span class="spanSeciones">Ver Grupos</span>
                         </a>
                     </li>
                      <li>
-                        <a href="#">
+                        <a href="EstCCoins.aspx">
                             <i class="fa fa-th"></i>
                             <span class="spanSeciones">Ver C-Coins</span>
                         </a>

@@ -138,9 +138,35 @@ namespace Gemma.Pages
                         cmd.ExecuteNonQuery();
                         conexion.Close();
                         msjEstudianteAñadido();
+                        crearCartera(idEstudiante, idClase);
                     }
                 }
                 
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public void crearCartera(int idEstudiante, int idClase)
+        {
+            try
+            {
+                if (idClase == 0)
+                {
+                    msjDropVacio();
+                }
+                else
+                {
+                    conexion.Open();
+                    string cadena = CdGestionEstudiantes.crearCartera(idEstudiante, idClase);
+                    MySqlCommand cmd = new MySqlCommand(cadena, conexion);
+                    cmd.ExecuteNonQuery();
+                    conexion.Close();
+                }
+
             }
             catch (Exception ex)
             {
