@@ -71,4 +71,3 @@ C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.csproj.CoreCompileInputs
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.csproj.CopyComplete
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.dll
 C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.pdb
-C:\Users\alfre\source\repos\Gemma\Gemma\obj\Debug\Gemma.csproj.AssemblyReference.cache

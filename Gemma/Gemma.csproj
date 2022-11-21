@@ -380,7 +380,9 @@
     <Content Include="Pages\CrudClases.aspx" />
     <Content Include="Pages\CrudGesEstudiantes.aspx" />
     <Content Include="Pages\CrudGrupos.aspx" />
+    <Content Include="Pages\CrudPremios.aspx" />
     <Content Include="Pages\CrudPublicaciones.aspx" />
+    <Content Include="Pages\EstCanjeoCCoins.aspx" />
     <Content Include="Pages\EstCCoins.aspx" />
     <Content Include="Pages\EstClases.aspx" />
     <Content Include="Pages\EstGrupos.aspx" />
@@ -393,6 +395,7 @@
     <Content Include="Pages\HomeE.aspx" />
     <Content Include="Pages\Index.aspx" />
     <Content Include="Pages\Login.aspx" />
+    <Content Include="Pages\Premios.aspx" />
     <Content Include="Pages\Profesor.aspx" />
     <Content Include="Pages\Publicaciones.aspx" />
     <Content Include="Pages\Register.aspx" />
@@ -407,6 +410,7 @@
     <Content Include="js\plugins\slimScroll\slimScroll.jquery.json" />
     <Content Include="MpProfesor.Master" />
     <None Include="Scripts\jquery-3.6.1.intellisense.js" />
+    <Content Include="Pages\SolicitudesPremios.aspx" />
     <Content Include="Scripts\jquery-3.6.1.js" />
     <Content Include="Scripts\jquery-3.6.1.min.js" />
     <Content Include="Scripts\jquery-3.6.1.slim.js" />
@@ -429,8 +433,10 @@
     <Compile Include="Cadenas\CdGestionGrupos.cs" />
     <Compile Include="Cadenas\CdGrupoEstudiantes.cs" />
     <Compile Include="Cadenas\CdGrupos.cs" />
+    <Compile Include="Cadenas\CdPremios.cs" />
     <Compile Include="Cadenas\CdPublicaciones.cs" />
     <Compile Include="Cadenas\CdRegistro.cs" />
+    <Compile Include="Cadenas\CdSolicitudesPremios.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -497,12 +503,26 @@
     <Compile Include="Pages\CrudGrupos.aspx.designer.cs">
       <DependentUpon>CrudGrupos.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\CrudPremios.aspx.cs">
+      <DependentUpon>CrudPremios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\CrudPremios.aspx.designer.cs">
+      <DependentUpon>CrudPremios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\CrudPublicaciones.aspx.cs">
       <DependentUpon>CrudPublicaciones.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Pages\CrudPublicaciones.aspx.designer.cs">
       <DependentUpon>CrudPublicaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EstCanjeoCCoins.aspx.cs">
+      <DependentUpon>EstCanjeoCCoins.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\EstCanjeoCCoins.aspx.designer.cs">
+      <DependentUpon>EstCanjeoCCoins.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pages\EstCCoins.aspx.cs">
       <DependentUpon>EstCCoins.aspx</DependentUpon>
@@ -588,6 +608,13 @@
     <Compile Include="Pages\Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Premios.aspx.cs">
+      <DependentUpon>Premios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\Premios.aspx.designer.cs">
+      <DependentUpon>Premios.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Profesor.aspx.cs">
       <DependentUpon>Profesor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -615,6 +642,13 @@
     </Compile>
     <Compile Include="MpProfesor.Master.designer.cs">
       <DependentUpon>MpProfesor.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\SolicitudesPremios.aspx.cs">
+      <DependentUpon>SolicitudesPremios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pages\SolicitudesPremios.aspx.designer.cs">
+      <DependentUpon>SolicitudesPremios.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="VariablesEntorno\UserId.cs" />

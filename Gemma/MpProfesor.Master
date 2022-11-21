@@ -114,6 +114,18 @@
                             
                         </a>
                     </li>
+                    <li>
+                        <a href="Premios.aspx">
+                            <i class="fa fa-th"></i>
+                            <span class="spanSeciones">Premios</span> 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="SolicitudesPremios.aspx">
+                            <i class="fa fa-th"></i>
+                            <span class="spanSeciones">Solicitudes Premios</span> 
+                        </a>
+                    </li>
                 </ul>
             </section>
         </aside>

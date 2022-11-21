@@ -28,5 +28,20 @@ namespace Gemma.Cadenas
                 "WHERE `wallets`.`users_id`= "+idEstudiante+" AND `wallets`.`classes_id`= "+idClase+"; ";
             return cd;
         }
+
+        public static string traerCantidadDeCCoins(int idEstudiante, int idClase)
+        {
+            string cd = "SELECT id, summary FROM `wallets` WHERE users_id = "+idEstudiante+" AND classes_id = "+idClase+";";
+            return cd;
+        }
+        public static string restarCCoins(int idEstudiante, int idClase, double costo)
+        {
+            string cd = "UPDATE `wallets` SET summary = summary - "+costo+" " +
+                "WHERE `wallets`.`users_id`= "+idEstudiante+"  AND `wallets`.`classes_id`= "+idClase+"; ";
+            return cd;
+        }
+
+
+
     }
 }

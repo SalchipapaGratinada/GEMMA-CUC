@@ -65,6 +65,13 @@ function agregueCCcoins() {
     toastr.warning("Digite Los C-Coins.");
 }
 
+function CCoinsInsuficientes() {
+    toastr.warning(" Los C-Coins Son Insuficientes.");
+}
+function canjeoExitoso() {
+    toastr.success("El Canjeo Fue Exito Rey");
+}
+
 
 
 

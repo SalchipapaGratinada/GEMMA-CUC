@@ -184,7 +184,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="EstCanjeoCCoins.aspx">
                             <i class="fa fa-th"></i>
                             <span class="spanSeciones">Canjear C-Coins</span>
                         </a>
