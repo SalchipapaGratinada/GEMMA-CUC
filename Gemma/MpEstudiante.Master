@@ -122,12 +122,13 @@
 
         .cerrarSession {
             margin-right:-55rem;
+            font-size:1.5rem;
         }
     </style>
 </head>
 <body class="skin-blue">
     <header class="header">
-        <a href="#" class="logo">Gemma-CUC-2022</a>
+        <a href="Estudiante.aspx" class="logo">Gemma-CUC-2022</a>
         <nav class="navbar navbar-static-top" role="navigation">
             <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle Navigation</span>
@@ -139,7 +140,6 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu  no-cursor">
                         <a href="Index.aspx">
-                            <%--<i class="glyphicon glyphicon-user"></i>--%>
                             <span id="close">Cerrar Sesión</span>
                         </a>
                     </li>

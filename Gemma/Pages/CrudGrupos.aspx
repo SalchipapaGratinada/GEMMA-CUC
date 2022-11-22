@@ -5,6 +5,7 @@
     <script src="../Scripts/toastr.js"></script>
     <link href="../content/toastr.css" rel="stylesheet" />
     <link href="../Estilos/LoginAndRegister.css" rel="stylesheet" />
+    <link href="../Estilos/EGestionarClase.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -13,7 +14,7 @@
         <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
     </div>
 
-    <div class="contenedorClases">
+    <div class="contenedorGrupos">
         <div class="mb-3">
             <label class="form-label">Nombre Grupo</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="tbNombreGrupo"></asp:TextBox>
@@ -28,8 +29,8 @@
         </div>
 
         <asp:Button runat="server" CssClass="btn btn-success" ID="BtnCreate" Text="Create" Visible="false" OnClick="BtnCreate_Click"/>
-        <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnUpdate" Text="Update" Visible="false" OnClick="BtnUpdate_Click"/>
-        <asp:Button runat="server" CssClass="btn btn-primary" ID="BtnDelete" Text="Delete" Visible="false" OnClick="BtnDelete_Click" OnClientClick="return confirm('¿Esta Seguro Que Desea Eliminar El Grupo?');"/>
+        <asp:Button runat="server" CssClass="btn btn-warning" ID="BtnUpdate" Text="Update" Visible="false" OnClick="BtnUpdate_Click"/>
+        <asp:Button runat="server" CssClass="btn btn-danger" ID="BtnDelete" Text="Delete" Visible="false" OnClick="BtnDelete_Click" OnClientClick="return confirm('¿Esta Seguro Que Desea Eliminar El Grupo?');"/>
         <asp:Button runat="server" CssClass="btn btn-primary btn-dark" ID="BtnBack" Text="Back" Visible="True" OnClick="BtnBack_Click" />
     </div>
 

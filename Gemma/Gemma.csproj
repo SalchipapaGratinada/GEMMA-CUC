@@ -232,6 +232,7 @@
     <Content Include="css\morris\morris.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.css" />
     <Content Include="css\timepicker\bootstrap-timepicker.min.css" />
+    <Content Include="Estilos\EGestionarClase.css" />
     <Content Include="Estilos\GestionEstudiantes.css" />
     <Content Include="Estilos\LoginAndRegister.css" />
     <Content Include="Estilos\PaginaEmergente.css" />

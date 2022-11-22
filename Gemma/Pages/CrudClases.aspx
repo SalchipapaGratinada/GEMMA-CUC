@@ -5,12 +5,13 @@
     <script src="../Scripts/toastr.js"></script>
     <link href="../content/toastr.css" rel="stylesheet" />
     <link href="../Estilos/LoginAndRegister.css" rel="stylesheet" />
+    <link href="../Estilos/EGestionarClase.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <br />
-    <div class="mx-auto" style="width: 250px">
-        <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
+    <div class="mx-auto" style="width: 250px; ">
+        <asp:Label runat="server" CssClass="h2 font-weight:bold" ID="lbltitulo"></asp:Label>
     </div>
 
     <div class="contenedorClases">

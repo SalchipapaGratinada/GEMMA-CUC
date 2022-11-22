@@ -5,6 +5,7 @@
     <script src="../Scripts/toastr.js"></script>
     <link href="../content/toastr.css" rel="stylesheet" />
     <link href="../Estilos/LoginAndRegister.css" rel="stylesheet" />
+    <link href="../Estilos/EGestionarClase.css" rel="stylesheet" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -14,7 +15,7 @@
         <asp:Label runat="server" CssClass="h2" ID="lbltitulo"></asp:Label>
     </div>
 
-    <div class="contenedorClases">
+    <div class="contenedorDatosEstudiante">
         <div class="mb-3">
             <label class="form-label">Nombre Estudiante</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="tbNombreEstudiante"></asp:TextBox>

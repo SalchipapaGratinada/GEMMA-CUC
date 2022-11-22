@@ -28,8 +28,8 @@
                     <Columns>
                         <asp:TemplateField HeaderText="Opciones De Administrador">
                             <ItemTemplate>
-                                <asp:Button runat="server" ID="BtnAñadir" Text="Añadir" class="btn form-control-sm btn-primary" OnClick="BtnAñadir_Click"/>
-                                <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" class="btn form-control-sm btn-danger" OnClick="btnEliminar_Click"/>
+                                <asp:Button runat="server" ID="BtnAñadir" Text="Añadir" class="btn btn-lg form-control-sm btn-primary" OnClick="BtnAñadir_Click"/>
+                                <asp:Button runat="server" ID="btnEliminar" Text="Eliminar" class="btn btn-lg form-control-sm btn-danger" OnClick="btnEliminar_Click"/>
                             </ItemTemplate>
                         </asp:TemplateField>
                     </Columns>

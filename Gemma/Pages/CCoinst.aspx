@@ -17,7 +17,7 @@
             <div class="card-body">
                 <h5 class="card-title">C-Coins - Clase</h5>
                 <p class="card-text">Aqui puede agregar C-Coins a toda la clase en general, tenga n cuenta que solo puede agregar a las clases creadas por usted.</p>
-                <asp:Button runat="server" Text="Asignar" CssClass="btn btn-success" ID="btnCoinsClases" OnClick="btnCoinsClases_Click"/>
+                <asp:Button runat="server" Text="Asignar" CssClass="btn btn-lg btn-success" ID="btnCoinsClases" OnClick="btnCoinsClases_Click"/>
                 <p class="card-text"><small class="text-muted">C-Coins: Moneda de cambio no legal</small></p>
             </div>
         </div>
@@ -26,7 +26,7 @@
             <div class="card-body">
                 <h5 class="card-title">C-Coins - Grupo</h5>
                 <p class="card-text">Aqui puede agregar C-Coins a los grupos que estan agregados a las clases. </p>
-                <asp:Button runat="server" Text="Asignar" CssClass="btn btn-success" ID="btnCoinsGrupal" OnClick="btnCoinsGrupal_Click" />
+                <asp:Button runat="server" Text="Asignar" CssClass="btn btn-lg btn-success" ID="btnCoinsGrupal" OnClick="btnCoinsGrupal_Click" />
                 <p class="card-text"><small class="text-muted">C-Coins: Moneda de cambio no legal</small></p>
             </div>
         </div>
@@ -35,7 +35,7 @@
             <div class="card-body">
                 <h5 class="card-title">C-Coins - Individual</h5>
                 <p class="card-text">Aqui puede agregar C-Coins individuales a los estudiantes que pertenezan  su clase.</p>
-                <asp:Button runat="server" Text="Asignar" CssClass="btn btn-success" ID="btnCoinsIndividual" OnClick="btnCoinsIndividual_Click" />
+                <asp:Button runat="server" Text="Asignar" CssClass="btn btn-lg btn-success" ID="btnCoinsIndividual" OnClick="btnCoinsIndividual_Click" />
                 <p class="card-text"><small class="text-muted">C-Coins: Moneda de cambio no legal</small></p>
             </div>
         </div>

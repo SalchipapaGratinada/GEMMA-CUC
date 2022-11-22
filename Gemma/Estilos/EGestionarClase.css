@@ -1,0 +1,28 @@
+﻿
+.tamañoTexto {
+    font-size: 1.2rem;
+}
+
+.contenedorClases {
+    height: 210px;
+    width: 280px;
+    font-size:2rem;
+    margin:0 auto;
+}
+.contenedorGrupos {
+    height: 250px;
+    width: 280px;
+    font-size: 2rem;
+    margin: 0 auto;
+}
+
+.contenedorBusqueda {
+    width: 250px;
+}
+
+.contenedorDatosEstudiante {
+    height: 330px;
+    width: 280px;
+    font-size: 2rem;
+    margin: 0 auto;
+}

@@ -27,13 +27,17 @@
         .spanSeciones{
             font-size: 2rem;
         }
+        .cerrarSession {
+            margin-right:-55rem;
+            font-size: 1.5rem;
+        }
     </style>
 
 </head>
 
 <body class="skin-blue">
     <header class="header">
-        <a href="#" class="logo">Gemma-CUC-2022</a>
+        <a href="Profesor.aspx" class="logo">Gemma-CUC-2022</a>
         <nav class="navbar navbar-static-top" role="navigation">
             <a href="#" class="navbar-btn sidebar-toggle" data-toggle="offcanvas" role="button">
                 <span class="sr-only">Toggle Navigation</span>
@@ -45,7 +49,6 @@
                 <ul class="nav navbar-nav">
                     <li class="dropdown user user-menu  no-cursor">
                         <a href="Index.aspx">
-                            <%--<i class="glyphicon glyphicon-user"></i>--%>
                             <span id="close">Cerrar Sesión</span>
                         </a>
                     </li>
@@ -67,62 +70,62 @@
                 <ul class="sidebar-menu">
                     <li class="active">
                         <a href="Profesor.aspx">
-                            <i class="fa fa-dashboard"></i>
+                            <i class="fa fa-home"></i>
                             <span class="spanSeciones">Panel General</span>
                         </a>
                     </li>
                     <li>
                         <a href="GestionarClase.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-cog"></i>
                             <span class="spanSeciones">Gestionar Clases</span>
                         </a>
                     </li>
                     <li>
                         <a href="GestionarGrupos.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-cog"></i>
                             <span class="spanSeciones">Gestionar Grupos</span>
                         </a>
                     </li>
                     <li>
                         <a href="GestionarEstudiantes.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-pencil"></i>
                             <span class="spanSeciones">Estudiantes</span>
                         </a>
                     </li>
                     <li>
                         <a href="GestionEstudiantesGrupos.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-pencil"></i>
                             <span class="spanSeciones">Clases - Grupos</span>
                         </a>
                     </li>
                     <li>
                         <a href="GrupoEstudiantes.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-pencil"></i>
                             <span class="spanSeciones">Grupos - Estudiantes</span>
                         </a>
                     </li>
                     <li>
                         <a href="CCoinst.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-book"></i>
                             <span class="spanSeciones">C-Coinst</span>
                         </a>
                     </li>
                     <li>
                         <a href="Publicaciones.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-book"></i>
                             <span class="spanSeciones">Publicaciones</span>
                             
                         </a>
                     </li>
                     <li>
                         <a href="Premios.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-key"></i>
                             <span class="spanSeciones">Premios</span> 
                         </a>
                     </li>
                     <li>
                         <a href="SolicitudesPremios.aspx">
-                            <i class="fa fa-th"></i>
+                            <i class="fa fa-envelope-o"></i>
                             <span class="spanSeciones">Solicitudes Premios</span> 
                         </a>
                     </li>
